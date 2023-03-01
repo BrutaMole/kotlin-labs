@@ -10,24 +10,39 @@
         android:id="@+id/mainText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        android:visibility="invisible"
+        android:textSize="24sp"
+        android:visibility="visible"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.16" />
 
     <Button
         android:id="@+id/mainBut"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:onClick="toastMe"
+        android:layout_marginTop="216dp"
+        android:onClick="showMe"
         android:text="Отобразить"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/mainText"
-        app:layout_constraintVertical_bias="0.162" />
+        app:layout_constraintVertical_bias="0.036" />
+
+    <EditText
+        android:id="@+id/editedText"
+        android:layout_width="325dp"
+        android:layout_height="83dp"
+        android:ems="10"
+        android:hint="Введите строку..."
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toTopOf="@+id/mainBut"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/mainText" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

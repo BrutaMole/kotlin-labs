@@ -5,6 +5,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -21,14 +22,18 @@ public final class ActivityMainBinding implements ViewBinding {
   private final ConstraintLayout rootView;
 
   @NonNull
+  public final EditText editedText;
+
+  @NonNull
   public final Button mainBut;
 
   @NonNull
   public final TextView mainText;
 
-  private ActivityMainBinding(@NonNull ConstraintLayout rootView, @NonNull Button mainBut,
-      @NonNull TextView mainText) {
+  private ActivityMainBinding(@NonNull ConstraintLayout rootView, @NonNull EditText editedText,
+      @NonNull Button mainBut, @NonNull TextView mainText) {
     this.rootView = rootView;
+    this.editedText = editedText;
     this.mainBut = mainBut;
     this.mainText = mainText;
   }
@@ -60,6 +65,12 @@ public final class ActivityMainBinding implements ViewBinding {
     // This is done to optimize the compiled bytecode for size and performance.
     int id;
     missingId: {
+      id = R.id.editedText;
+      EditText editedText = ViewBindings.findChildViewById(rootView, id);
+      if (editedText == null) {
+        break missingId;
+      }
+
       id = R.id.mainBut;
       Button mainBut = ViewBindings.findChildViewById(rootView, id);
       if (mainBut == null) {
@@ -72,7 +83,7 @@ public final class ActivityMainBinding implements ViewBinding {
         break missingId;
       }
 
-      return new ActivityMainBinding((ConstraintLayout) rootView, mainBut, mainText);
+      return new ActivityMainBinding((ConstraintLayout) rootView, editedText, mainBut, mainText);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

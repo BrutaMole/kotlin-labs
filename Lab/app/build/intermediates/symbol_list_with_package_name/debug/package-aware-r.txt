@@ -2974,6 +2974,7 @@ id easeInOut
 id easeOut
 id east
 id edit_query
+id editedText
 id elastic
 id embed
 id end

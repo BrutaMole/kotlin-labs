@@ -2973,6 +2973,7 @@ int id easeInOut 0x7f0800a7
 int id easeOut 0x7f0800a8
 int id east 0x7f0800a9
 int id edit_query 0x7f0800aa
+int id editedText 0x7f0801ee
 int id elastic 0x7f0800ab
 int id embed 0x7f0800ac
 int id end 0x7f0800ad
