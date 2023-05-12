@@ -1,0 +1,17 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Theme.Lab3" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">#f90</item>
+        <item name="colorPrimaryDark">#8c888c</item>
+        <item name="colorAccent">#adbad3</item>
+        <!-- Customize your theme here. -->
+    </style>
+    <style name="buttonactivity">
+        <item name="android:layout_width">0dp</item>
+        <item name="colorControlHighlight">#848175</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:background">#999</item>
+        <item name="android:textColor">@color/black</item>
+    </style>
+</resources>
